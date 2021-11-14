@@ -1,0 +1,14 @@
+{
+    "name": "paco/tienda",
+    "description": "proyecto tarea tienda articulos",
+    "type": "project",
+    "license": "free",
+    "autoload": {
+        "psr-4": {
+            "Paco\\Tienda\\": "src/"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.16"
+    }
+}
