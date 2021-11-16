@@ -100,13 +100,14 @@ class Articulos extends Conexion{
     public function generarArticulos($c){
 
         if ($this->hayArticulos()==0){
-        $faker= Faker\Factory::create('es_ES');
-        $articulos = (new Articulos)->devolverId();
+       $faker = Faker\Factory::create('es_ES');
+
+        $categorias = (new Categorias)->devolverId();
 
         for($i=0;$i<$c;$i++){
             $nombre=$faker->name(10);
             $precio=$faker->randomNumber(2);
-            $categoria_id = $articulos[array_rand($articulos, 1)];
+            $categoria_id = $categorias[array_rand($categorias, 1)];
 
             (new Articulos)->setNombre($nombre)
             ->setPrecio($precio)

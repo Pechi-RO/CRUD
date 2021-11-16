@@ -17,7 +17,7 @@ class Categorias extends Conexion{
 
     public function create()
     {
-        $q = "insert into categorias(nombre, descripcion,) values(:n, :d,)";
+        $q = "insert into categorias(nombre, descripcion) values(:n, :d)";
         $stmt = parent::$conexion->prepare($q);
         try {
             $stmt->execute([
@@ -26,7 +26,7 @@ class Categorias extends Conexion{
                 
             ]);
         } catch (PDOException $ex) {
-            die("Error al insertar libro: " . $ex->getMessage());
+            die("Error al insertar categoria: " . $ex->getMessage());
         };
         parent::$conexion = null;
     }
@@ -120,7 +120,22 @@ class Categorias extends Conexion{
         parent::$conexion = null;
         return ($totalLibros > 0);
     }
+    public function devolverId(){
+        $q="select id from categorias order by id";
+        $stmt=parent::$conexion->prepare($q);
+        try{
+            $stmt->execute();
 
+        }catch(PDOException $ex){
+            die("error al devolver la id:".$ex->getMessage());
+        }
+        $id=[];
+        while($fila=$stmt->fetch(PDO::FETCH_OBJ)){
+            $id[]=$fila->id;
+        }
+        parent::$conexion==null;
+        return $id;
+    }
 
     /**
      * Get the value of id

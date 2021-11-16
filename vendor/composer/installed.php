@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd482bc65281f2f48ac11b142d6cdf5bb2824f4da',
+        'reference' => '1d9d0fe4a1970a93114e084ca087475584ba5680',
         'name' => 'paco/tienda',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd482bc65281f2f48ac11b142d6cdf5bb2824f4da',
+            'reference' => '1d9d0fe4a1970a93114e084ca087475584ba5680',
             'dev_requirement' => false,
         ),
         'psr/container' => array(

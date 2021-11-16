@@ -1,11 +1,11 @@
 {
     "name": "paco/tienda",
-    "description": "proyecto tarea tienda articulos",
+    "description": "tienda crud",
     "type": "project",
     "license": "free",
     "autoload": {
         "psr-4": {
-            "Paco\\Tienda\\": "src/"
+            "Tienda\\": "src/"
         }
     },
     "require": {

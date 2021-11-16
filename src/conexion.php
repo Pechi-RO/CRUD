@@ -21,6 +21,8 @@ class Conexion{
         $dns="mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
         try{
+            self::$conexion=new PDO($dns, $usuario, $pass);
+
             self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         }catch(PDOException $ex){
